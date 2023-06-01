@@ -1,0 +1,198 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.adrian.foodtravel.Activity_anhadir">
+
+        <TextView
+            android:id="@+id/txtEstablecimiento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Establecimiento"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSeparador"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtEstablecimiento"
+            android:text="----------------------------------------"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editNombre"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtSeparador"
+            android:layout_alignRight="@+id/txtSeparador"
+            android:layout_below="@+id/txtSeparador"
+            android:hint="@string/nombre" />
+
+        <TextView
+            android:id="@+id/txtUbicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editNombre"
+            android:text="Direccion"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSeparador2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtUbicacion"
+            android:text="----------------------------------------"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <RadioButton
+            android:id="@+id/rdbMiPosicion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSeparador2"
+            android:layout_centerHorizontal="true"
+            android:text="@string/miPosicion" />
+
+
+        <TextView
+            android:id="@+id/txtProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rdbMiPosicion"
+            android:layout_marginTop="10dp"
+            android:text="Productos"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSeparador3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtProducto"
+            android:text="----------------------------------------"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerProducto"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rdgGroup"
+            android:layout_alignStart="@+id/rdgGroup"
+            android:layout_below="@+id/txtSeparador3"
+            android:entries="@array/producto" />
+
+        <EditText
+            android:id="@+id/editPrecioMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/spinnerProducto"
+            android:layout_toLeftOf="@+id/editPrecioMax"
+            android:layout_toStartOf="@+id/editPrecioMax"
+            android:hint="Min*"
+            android:numeric="decimal" />
+
+        <EditText
+            android:id="@+id/editPrecioMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/editPrecioMin"
+            android:layout_toLeftOf="@+id/editOferta"
+            android:layout_toStartOf="@+id/editOferta"
+            android:hint="Max*"
+            android:numeric="decimal" />
+
+        <EditText
+            android:id="@+id/editOferta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtSeparador3"
+            android:layout_alignRight="@+id/txtSeparador3"
+            android:layout_alignTop="@+id/editPrecioMax"
+            android:hint="@string/oferta"
+            android:numeric="decimal" />
+
+        <EditText
+            android:id="@+id/editMenu"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/spinnerProducto"
+            android:layout_alignStart="@+id/spinnerProducto"
+            android:layout_below="@+id/spinnerProducto"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/editPrecioMenu"
+            android:layout_toStartOf="@+id/editPrecioMenu"
+            android:hint="Menu" />
+
+        <EditText
+            android:id="@+id/editPrecioMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/editOferta"
+            android:layout_alignRight="@+id/editOferta"
+            android:layout_below="@+id/spinnerProducto"
+            android:layout_marginTop="20dp"
+            android:hint="@string/precio"
+            android:numeric="decimal" />
+
+        <Button
+            android:id="@+id/btnAnhadir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnAnhadirProducto"
+            android:layout_alignEnd="@+id/txtProducto"
+            android:layout_alignRight="@+id/txtProducto"
+            android:layout_alignTop="@+id/btnAnhadirLugar"
+            android:layout_toRightOf="@+id/editOtraUbicacion"
+            android:onClick="onClickAnhadir"
+            android:text="@string/btnAñadir" />
+
+        <Button
+            android:id="@+id/btnAnhadirLugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editMenu"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/editPrecioMax"
+            android:layout_toRightOf="@+id/btnAnhadir"
+            android:layout_toStartOf="@+id/editPrecioMax"
+            android:enabled="false"
+            android:onClick="onClickAnhadirLugar"
+            android:text="@string/btnLugar" />
+
+        <Button
+            android:id="@+id/btnAnhadirProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editMenu"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/btnAnhadirLugar"
+            android:enabled="false"
+            android:onClick="onClickAnhadirProducto"
+            android:text="@string/btnAñadirProducto" />
+
+
+        <TextView
+            android:id="@+id/txtAyuda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnAnhadir"
+            android:layout_marginTop="20dp"
+            android:text="@string/ayuda" />
+
+    </RelativeLayout>
+</ScrollView>
+
+

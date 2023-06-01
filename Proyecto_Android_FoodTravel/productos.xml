@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="producto">
+        <item>Bebidas</item>
+        <item>Hamburguesa</item>
+        <item>Pizza</item>
+        <item>Pasta</item>
+        <item>Bocadillos</item>
+        <item>Perritos</item>
+        <item>Ensaladas</item>
+        <item>Otros</item>
+    </string-array>
+</resources>

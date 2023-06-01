@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">FoodTravel</string>
+
+    <string name="nombre">Nombre*</string>
+    <string name="miPosicion">Mi Ubicación*</string>
+    <string name="otraPoscion">Otra Ubicación*</string>
+    <string name="btnAñadir">Añadir Sitio</string>
+    <string name="btnLugar">Añadir Dirección</string>
+    <string name="btnAñadirProducto">Añadir Producto</string>
+    <string name="oferta">Oferta</string>
+    <string name="ayuda">*La estructura de la direccion es la siguiente Nombre-Calle, Numero, Ciudad\n*Los campos con asterisco son obligatorios\n*Al marcar Mi Ubicación se detectara tu ubicación\n*La oferta no es obligatoria\n*La opción de la lista Otros corresponderia a otros productos como por ejemplo a tapas</string>
+    <string name="menu_mapa">Mapa</string>
+    <string name="menu_anhadir">Añadir</string>
+    <string name="precio">Precio*</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_activity_mapa">Map</string>
+    <string name="title_activity_activity_direcciones">Direcciones</string>
+    <string name="title_activity_activity__establecimientos">Establecimiento</string>
+    <string name="title_activity_activity_anhadir">Añadir Establecimiento</string>
+    <string name="title_activity_activity__anhadir_direccion">Añadir Direccion</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_activity__anhadir_productos">Añadir Productos</string>
+    <string name="title_activity_activity_buscar">Activity_buscar</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
